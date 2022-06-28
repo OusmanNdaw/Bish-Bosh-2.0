@@ -1,14 +1,37 @@
-Number, Bish, Bosh;
-for (number = 0, number >= 100, number++){ 
-        <script> 
-        string number;
-        for(number = 1; number >=100; number++)
-                {
-                if(number % 3 == 0) {alert(Bish)};
-                if(number % 4 == 0) {alert(Bosh)};
+function myFunction2() {
+
+        var x = document.getElementById("frm1");
+        var loopValue = x.elements[0].value;
+        var division1 = x.elements[1].value;
+        var division2 = x.elements[2].value;
+        var text="";
+        var i;
+        for (i = 1; i <= loopValue; i++) {
+    
+            if (i % division1 == 0 && i % division2 == 0) {
+    
+              text += "Bisch-Bosch" + ", ";
+    
+              //  document.write("Bisch-Bosch" + ", ");
+            } else if (i % division1 == 0) {
+                text+="Bisch" + ", ";
+    
+    
+            } else if (i % division2 == 0) {
+                text+="Bosch" + ", ";
+    
+              //  document.write("Bosch" + ", ");
+            } else {
+              text+=i + ", ";
+    
+                //document.write(i + ", ");
+            }
+    
         }
-        </script>  
-}
+        document.getElementById("demo").innerHTML = text;
+    
+    
+    }
 
 
 
